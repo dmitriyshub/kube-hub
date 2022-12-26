@@ -1,1 +1,4 @@
-kube-hub repo - practice and training with k8s
+### - kube-hub repo -
+## practice and training with k8s
+## Install minikube 
+
