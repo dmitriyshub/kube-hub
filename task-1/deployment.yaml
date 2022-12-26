@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: simple-webserver
-          image: public.ecr.aws/<ecr_endpoint>/<image_name>:<0.0.1> # TODO change ip after
+          image: public.ecr.aws/r7m7o9d4/dmitriyshub-simple-webserver:latest # change uri after terraform apply
           readinessProbe:
             httpGet:
               path: /ready
