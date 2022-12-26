@@ -38,4 +38,5 @@ kubectl port-forward <pod-name> <local-port>:<pod-port>
 #### Delete the app
 ```shell
 kubectl delete -f deployment.yaml
+terraform destroy -auto-approve
 ```
