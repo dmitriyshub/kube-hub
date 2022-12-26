@@ -30,3 +30,13 @@ resource "aws_ecrpublic_repository" "public-ecr" {
     name = "dmitriyshub-simple-webserver"
   }
 }
+# ecr resource metadata output
+output "public-ecr-arn" {
+  value = aws_ecrpublic_repository.public-ecr.arn
+}
+output "public-ecr-id" {
+  value = aws_ecrpublic_repository.public-ecr.id
+}
+output "public-ecr-uri" {
+  value = aws_ecrpublic_repository.public-ecr.repository_uri
+}
