@@ -23,7 +23,7 @@ def update_profile():
 # Try by: curl localhost:8080/get-profile-picture
 @app.route('/get-profile-picture')
 def profile_picture():
-    return send_file('images/profile-1.jpg', mimetype='image/gif')
+    return send_file('img/profile-1.jpg', mimetype='image/gif')
 
 
 @app.route('/status')
