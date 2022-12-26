@@ -31,6 +31,11 @@ You can use [`kubectl port-forward`](https://kubernetes.io/docs/tasks/access-app
    To do so, perform:
 
 ```shell
+kubectl get pods
 kubectl port-forward <pod-name> <local-port>:<pod-port> 
 ```
 
+#### Delete the app
+```shell
+kubectl delete -f deployment.yaml
+```
