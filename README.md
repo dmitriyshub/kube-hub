@@ -14,9 +14,11 @@ Check kubectl state `kubectl cluster-info`
 
 #### Links
 [Kubernetes Tasks](https://kubernetes.io/docs/tasks/) \
-[Run a Stateless Application Using a Deployment](https://kubernetes.io/docs/tasks/run-application/run-stateless-application-deployment/) \
-[Use Port Forwarding to Access Applications in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) \
-[Use a Service to Access an Application in the Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/) 
 
 #### Tasks
-[task-1:](https://github.com/dmitriyshub/kube-hub/blob/main/task-1/) simple flask webserver
+[task-1 simple flask webserver](https://github.com/dmitriyshub/kube-hub/blob/main/task-1/) \
+[Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/tutorials/1-statelessApp) \
+[Use Port Forwarding to Access Applications in a Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/tutorials/2-portForward) \
+[Use a Service to Access an Application in the Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/) 
+
+
