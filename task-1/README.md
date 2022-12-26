@@ -33,3 +33,6 @@ You can use [`kubectl port-forward`](https://kubernetes.io/docs/tasks/access-app
 ```shell
 kubectl port-forward <pod-name> <local-port>:<pod-port> 
 ```
+
+#### Tasks
+[task-1:](https://github.com/dmitriyshub/kube-hub/blob/main/task-1/) simple flask webserver
