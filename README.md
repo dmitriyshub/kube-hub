@@ -8,7 +8,7 @@
 
 ```shell
 minikube start --driver=<container-runtime> --cpus=2 --memory=6g --nodes=2 # choose CRI, CPU, RAM and Number of Nodes 
-# container-runtimes = HyperV | Docker | VirtualBox | VMware | etc
+# container-runtimes = hyperv | docker | containerd | etc
 minikube addons enable metrics-server
 minikube dashboard
 ```
