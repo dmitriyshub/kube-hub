@@ -1,34 +1,44 @@
 *********************************************************************
 #### Kube-Hub Repository - Practice and Training with K8s
 *********************************************************************
-##### 1. Install [Minikube](https://minikube.sigs.k8s.io/docs/start/) 
+##### 1. Install [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+```shell
+#Linux Binary Installation x86-64
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+*********************************************************************
 ##### 2. Start Minikube Cluster and Dashboard
 
-  [Check other options for `minikube start [option]`](https://minikube.sigs.k8s.io/docs/commands/start/)
+[Check other options for `minikube start [option]`](https://minikube.sigs.k8s.io/docs/commands/start/)
 
 ```shell
-minikube start --driver=<container-runtime> --cpus=2 --memory=6g --nodes=2 # choose CRI, CPU, RAM and Number of Nodes 
+minikube start --kubernetes-version=<v0.0.0.>--driver=<container-runtime> --cpus=2 --memory=6g --nodes=2 # Choose K8s version, CRI, CPU, RAM and Number of Nodes 
 # container-runtimes = hyperv | docker | containerd | etc
 minikube addons enable metrics-server
 minikube dashboard
 ```
-Additional minikube addons `minikube addons list`
+Additional minikube addons `minikube addons list` \
+Change Node RAM `minikube config set memory <9001>`
+
+*********************************************************************
 
 ##### 3. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 **or create** `alias kubectl="minikube kubectl --`
 
 Check kubectl state `kubectl cluster-info`
+*********************************************************************
 
 ##### 4. Choose [Kubernetes Tasks](https://kubernetes.io/docs/tasks/) 
 *********************************************************************
-##### My K8s Tasks
+##### My Official K8s Tasks
 
-[Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/1_StatelessApp) \
-[Use Port Forwarding to Access Applications in a Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/2_PortForward) \
-[Use a Service to Access an Application in the Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/3_ServiceAccess) 
+* [Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/1_StatelessApp) 
+* [Use Port Forwarding to Access Applications in a Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/2_PortForward) 
+* [Use a Service to Access an Application in the Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/3_ServiceAccess) 
 
-##### My Other Tasks
-[Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver/)
+##### My Other K8s Tasks
+* [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver/)
 
 *********************************************************************
 
