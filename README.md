@@ -25,7 +25,7 @@ Check kubectl state `kubectl cluster-info`
 
 [Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/1_StatelessApp) \
 [Use Port Forwarding to Access Applications in a Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/2_PortForward) \
-[Use a Service to Access an Application in the Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/) 
+[Use a Service to Access an Application in the Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/3_ServiceAccess) 
 
 ##### My Other Tasks
 [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver/)
