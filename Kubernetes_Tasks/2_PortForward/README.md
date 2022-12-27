@@ -1,5 +1,5 @@
 [Use Port Forwarding to Access Applications in a Cluster << K8s Tutorial Link](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) 
-
+*********************************************************************
 ##### 1. Create mongo deployment
 ```shell
 kubectl apply -f mongo-deployment.yaml
@@ -31,3 +31,5 @@ Inside the db ping request `db.runCommand( { ping: 1 } )`
 ```shell
 kubectl delete -f mongo-deployment.yaml
 ```
+
+*********************************************************************

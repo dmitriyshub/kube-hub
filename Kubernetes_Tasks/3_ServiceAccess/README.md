@@ -1,8 +1,8 @@
 [Use a Service to Access an Application in a Cluster << K8s Tutorial Link](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
-
-
-
+*********************************************************************
 ![service image](/img/service-k8s.png)
+*********************************************************************
+
 ##### Further reading and doing
 Notes: 
 
@@ -13,7 +13,7 @@ Services can be exposed in different ways by specifying a `type` in the ServiceS
 
 - `ClusterIP` (default) - Exposes the Service on an internal IP in the cluster. This type makes the Service only reachable from within the cluster.
 - `NodePort` - Exposes the Service on some port of each **Node** in the cluster. Makes a Service accessible from outside the cluster using `<NodeIP>:<NodePort>`.
-
+*********************************************************************
 ##### 1. Apply hello-app
 
 ```shell
@@ -26,5 +26,6 @@ kubectl describe deployments hello-world
 ```shell
 kubectl expose deployment hello-world --type=NodePort --name=example-service
 kubectl describe services example-service
-
 ```
+
+*********************************************************************

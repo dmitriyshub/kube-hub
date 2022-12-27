@@ -1,6 +1,7 @@
-### Kube-Hub Repository - Practice and Training with K8s 
+### Kube-Hub Repository - Practice and Training with K8s
+*********************************************************************
 ##### 1. Install [Minikube](https://minikube.sigs.k8s.io/docs/start/) 
-
+##### 2. Start Minikube Cluster and Dashboard
 ```shell
 minikube start --driver=docker --cpu=2 --mem=6g
 minikube addons enable metrics-server
@@ -8,17 +9,22 @@ minikube dashboard
 ```
 Additional minikube addons `minikube addons list`
 
-##### 2. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) or create `alias kubectl="minikube kubectl --`
+##### 3. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+**or create** `alias kubectl="minikube kubectl --`
 
 Check kubectl state `kubectl cluster-info`
 
-#### Links
-[Kubernetes Tasks](https://kubernetes.io/docs/tasks/) 
+##### 4. Choose [Kubernetes Tasks](https://kubernetes.io/docs/tasks/) 
+*********************************************************************
+##### My K8s Tasks
 
-#### Tasks
-[task-1 simple flask webserver](https://github.com/dmitriyshub/kube-hub/blob/main/task-1/) \
-[Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/tutorials/1-statelessApp) \
-[Use Port Forwarding to Access Applications in a Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/tutorials/2-portForward) \
+[Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/1_StatelessApp) \
+[Use Port Forwarding to Access Applications in a Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/2_PortForward) \
 [Use a Service to Access an Application in the Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/) 
+
+##### My Other Tasks
+[Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver/)
+
+*********************************************************************
 
 
