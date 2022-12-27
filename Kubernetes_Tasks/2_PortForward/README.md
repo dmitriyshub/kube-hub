@@ -25,12 +25,10 @@ kubectl port-forward <mongo-pod-name> 28015:27017
 ```shell
 mongosh --port 28015
 ```
-
 Inside the db ping request `db.runCommand( { ping: 1 } )`
 *********************************************************************
 #### 5. Delete mongo deployment
 ```shell
 kubectl delete -f mongo-deployment.yaml
 ```
-
 *********************************************************************
