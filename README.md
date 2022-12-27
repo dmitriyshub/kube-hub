@@ -3,8 +3,12 @@
 *********************************************************************
 ##### 1. Install [Minikube](https://minikube.sigs.k8s.io/docs/start/) 
 ##### 2. Start Minikube Cluster and Dashboard
+
+  [Check other options for `minikube start [option]`](https://minikube.sigs.k8s.io/docs/commands/start/)
+
 ```shell
-minikube start --driver=docker --cpu=2 --mem=6g
+minikube start --driver=<container-runtime> --cpus=2 --memory=6g --nodes=2 # choose CRI, CPU, RAM and Number of Nodes 
+# container-runtimes = HyperV | Docker | VirtualBox | VMware | etc
 minikube addons enable metrics-server
 minikube dashboard
 ```
