@@ -35,7 +35,7 @@ kubectl get pods
 kubectl port-forward <pod-name> <local-port>:<pod-port> 
 ```
 
-#### 7. Delete the app
+##### 7. Delete the app
 ```shell
 kubectl delete -f deployment.yaml
 terraform destroy -auto-approve
