@@ -10,7 +10,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 *********************************************************************
 ##### 2. Start Minikube Cluster and Dashboard
 
-[Check other options for `minikube start [option]`](https://minikube.sigs.k8s.io/docs/commands/start/)
+Check other options for [`minikube start [option]`](https://minikube.sigs.k8s.io/docs/commands/start/)
 
 ```shell
 minikube start --kubernetes-version=<v0.0.0.>--driver=<container-runtime> --cpus=2 --memory=6g --nodes=2 # Choose K8s version, CRI, CPU, RAM and Number of Nodes 
