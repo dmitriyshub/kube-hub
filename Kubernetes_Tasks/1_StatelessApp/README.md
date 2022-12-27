@@ -8,6 +8,7 @@ kubectl describe deployment nginx-deployment
 kubectl get pods -l app=nginx
 kubectl describe pod <pod-name>
 ```
+*********************************************************************
 ##### 2. Update deployment
 ```yaml
 spec:
@@ -19,6 +20,7 @@ spec:
 kubectl apply -f deployment.yaml
 kubectl get pods -l app=nginx
 ```
+*********************************************************************
 ##### 3. Scale deployment
 ```yaml
 spec:
@@ -31,6 +33,7 @@ spec:
 kubectl apply -f deployment.yaml
 kubectl get pods -l app=nginx
 ```
+*********************************************************************
 ##### 4. Delete deployment 
 ```shell
 kubectl delete deployment nginx-deployment
@@ -39,5 +42,4 @@ or
 ```shell
 kubectl delete -f deployment.yaml
 ```
-
 *********************************************************************
