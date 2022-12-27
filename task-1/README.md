@@ -27,7 +27,7 @@ containers:
 ```shell
 kubectl apply -f deployment.yaml
 ```
-##### 6. port-forwarding to localhost on port 8080
+##### 6. Port-forwarding to localhost on port 8080
 You can use [`kubectl port-forward`](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) command to forward specific pod and port to your local machine, so you can visit the app under the `localhost:<port>` address. This type of connection can be useful for pod debugging and obviously should not be used outside the borders of the development team.
    To do so, perform:
 ```shell
