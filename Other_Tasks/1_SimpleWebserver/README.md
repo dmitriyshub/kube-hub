@@ -1,3 +1,4 @@
+*********************************************************************
 #### 1. Configure AWS (Optional)
 edit `~/.aws/*` files or use AWS tool: `aws configure`
 
@@ -40,3 +41,5 @@ kubectl port-forward <pod-name> <local-port>:<pod-port>
 kubectl delete -f deployment.yaml
 terraform destroy -auto-approve
 ```
+
+*********************************************************************

@@ -1,4 +1,5 @@
-### Kube-Hub Repository - Practice and Training with K8s
+*********************************************************************
+#### Kube-Hub Repository - Practice and Training with K8s
 *********************************************************************
 ##### 1. Install [Minikube](https://minikube.sigs.k8s.io/docs/start/) 
 ##### 2. Start Minikube Cluster and Dashboard
