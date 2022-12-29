@@ -49,8 +49,8 @@ kubectl delete pod memory-demo --namespace=task4
 ```
 *********************************************************************
 #### Exceed a Container's memory limit 
-Create a Pod that attempts to allocate more memory than its limit. \
-Here is the configuration file for a Pod that has one Container with a memory request of 50 MiB and a memory limit of 100 MiB
+* Create a Pod that attempts to allocate more memory than its limit. \
+* Here is the configuration file for a Pod that has one Container with a memory request of 50 MiB and a memory limit of 100 MiB
 ```yaml
 apiVersion: v1
 kind: Pod
