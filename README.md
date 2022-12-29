@@ -32,6 +32,8 @@ Check kubectl state `kubectl cluster-info`
 * [Use a Service to Access an Application in the Cluster](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/3_ServiceAccess) 
 * [Assign Memory Resources to Containers and Pods](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/4_AssignMemory)
 * [Assign CPU Resources to Containers and Pods](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/5_AssignCpu)
+* [Configure Liveness, Readiness and Startup Probes](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/6_LivenessReadiness)
+
 *********************************************************************
 ##### My Other K8s Tasks
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver/)
