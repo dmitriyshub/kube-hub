@@ -17,7 +17,7 @@ provider "aws" {
 resource "aws_ecrpublic_repository" "public-ecr" {
   provider = aws.us_east_1
 
-  repository_name = "dmitriyshub-zero-downtime-appr"
+  repository_name = "dmitriyshub-zero-downtime-app"
 
   catalog_data {
     about_text        = "simple flask webserver"
