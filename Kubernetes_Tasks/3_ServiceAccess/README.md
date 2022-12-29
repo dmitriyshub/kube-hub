@@ -78,6 +78,12 @@ kubectl expose deployment hello-world --type=NodePort --name=hello-world-deploym
 kubectl describe services hello-world-deployment-service -n task3
 ```
 *********************************************************************
+##### 3. Access App
+```shell
+curl http://<public-node-ip>:<node-port>
+```
+or with any web browser 
+*********************************************************************
 ##### 3.Delete All
 ```shell
 kubectl delete -f hello-app.yaml
@@ -87,3 +93,4 @@ or
 kubectl delete services hello-world-deployment-service -n task3
 kubectl delete deployment hello-world -n task3
 ```
+*********************************************************************
