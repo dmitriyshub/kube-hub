@@ -11,7 +11,9 @@ terraform apply -auto-approve
 ```
 ##### 3. Build Docker Image and Push it to Public Repository
 ```shell
-
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/s2q9x3z0
+docker build -t public.ecr.aws/s2q9x3z0/dmitriyshub-zero-downtime-app:0.0.1 .
+docker push public.ecr.aws/s2q9x3z0/dmitriyshub-zero-downtime-app:0.0.1
 ```
 *********************************************************************
 ##### 4. Change `image:version` in `deployment.yaml` file
