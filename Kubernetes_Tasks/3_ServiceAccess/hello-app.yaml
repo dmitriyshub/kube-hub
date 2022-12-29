@@ -6,11 +6,13 @@ spec:
   selector:
     matchLabels:
       run: load-balancer-example
+      app: hello-world
   replicas: 2
   template:
     metadata:
       labels:
         run: load-balancer-example
+        app: hello-world
     spec:
       containers:
         - name: hello-world
@@ -18,3 +20,18 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-deployment-service
+spec:
+  type: NodePort
+  selector:
+    app: hello-world
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001
