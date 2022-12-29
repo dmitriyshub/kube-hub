@@ -123,6 +123,7 @@ kind: Service
 metadata:
   name: hello-world-service
 spec:
+  type: ClusterIP
   selector:
     run: load-balancer-example
   ports:
