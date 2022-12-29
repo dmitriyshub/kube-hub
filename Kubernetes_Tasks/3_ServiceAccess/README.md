@@ -12,16 +12,78 @@ Services can be exposed in different ways by specifying a `type` in the ServiceS
 - `ClusterIP` (default) - Exposes the Service on an internal IP in the cluster. This type makes the Service only reachable from within the cluster.
 - `NodePort` - Exposes the Service on some port of each **Node** in the cluster. Makes a Service accessible from outside the cluster using `<NodeIP>:<NodePort>`.
 *********************************************************************
-##### 1. Apply hello-app
+Optional - Create namespace
 ```shell
-kubectl apply -f hello-app.yaml
-kubectl get deployments hello-world
-kubectl describe deployments hello-world
+kubectl create namespace task3
+```
+Check Cluster Information
+```yaml
+kubectl cluster-info
+```
+##### 1. Apply hello-app
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  selector:
+    matchLabels:
+      run: load-balancer-example
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: load-balancer-example
+    spec:
+      containers:
+        - name: hello-world
+          image: gcr.io/google-samples/node-hello:1.0
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+```
+```shell
+kubectl apply -f hello-app.yaml -n task3 
+kubectl get deployments hello-world -n task3
+kubectl describe deployments hello-world -n task3
+kubectl get replicasets -n task3
+kubectl describe replicasets -n task3
 ```
 *********************************************************************
 ##### 2. Add service
+```yaml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-deployment-service
+spec:
+  type: NodePort
+  selector:
+    run: load-balancer-example
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 30001
+```
 ```shell
-kubectl expose deployment hello-world --type=NodePort --name=example-service
-kubectl describe services example-service
+kubectl apply -f hello-app.yaml -n task3
+kubectl describe services hello-world-deployment-service -n task3
+```
+or
+```shell
+kubectl expose deployment hello-world --type=NodePort --name=hello-world-deployment-service -n task3
+kubectl describe services hello-world-deployment-service -n task3
 ```
 *********************************************************************
+##### 3.Delete All
+```shell
+kubectl delete -f hello-app.yaml
+```
+or 
+```shell
+kubectl delete services hello-world-deployment-service -n task3
+kubectl delete deployment hello-world -n task3
+```
