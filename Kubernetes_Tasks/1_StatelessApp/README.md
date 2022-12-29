@@ -43,3 +43,5 @@ or
 kubectl delete -f deployment.yaml
 ```
 *********************************************************************
+[Return to main README](https://github.com/dmitriyshub/kube-hub)
+*********************************************************************

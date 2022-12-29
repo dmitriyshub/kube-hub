@@ -37,5 +37,3 @@ Check kubectl state `kubectl cluster-info`
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver/)
 
 *********************************************************************
-
-

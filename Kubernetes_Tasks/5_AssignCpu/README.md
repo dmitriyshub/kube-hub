@@ -103,3 +103,5 @@ kubectl delete pod cpu-demo-2 --namespace=task5
 kubectl delete namespace task4
 ```
 *********************************************************************
+[Return to main README](https://github.com/dmitriyshub/kube-hub)
+*********************************************************************
