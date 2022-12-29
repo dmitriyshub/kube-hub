@@ -2,9 +2,9 @@
 [Assign Memory Resources to Containers and Pods << K8s Tutorial Link](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/)
 *********************************************************************
 #### Optional step
-Create a Namespace `kubectl create namespace task4` \
-Check `v1beta1.metrics.k8s.io` with `kubectl get apiservices` output \
-Enable metrics `minikube addons enable metrics-server`
+* Create a Namespace `kubectl create namespace task4` 
+* Check `v1beta1.metrics.k8s.io` with `kubectl get apiservices` output 
+* Enable metrics `minikube addons enable metrics-server`
 *********************************************************************
 #### Specify a memory request and a memory limit
 * To specify a memory request for a Container, include the `resources:requests` field in the Container's resource manifest
@@ -34,16 +34,19 @@ spec:
 ##### 1. Create Pod
 ```shell
 kubectl apply -f memory-request-limit.yaml -n task4 # Create the Pod
+```
+##### 2. Inspect Pod
+```shell
 kubectl get pod memory-demo --namespace=task4 # Verify that the Pod Container is running
 kubectl get pod memory-demo --output=yaml --namespace=task4 # View detailed information about the Pod
 ```
 *********************************************************************
-##### 2. Run `kubectl top` to fetch the metrics for the pod
+##### 3. Run `kubectl top` to fetch the metrics for the pod
 ```shell
 kubectl top pod memory-demo --namespace=task4
 ```
 *********************************************************************
-##### 3. Delete Pod
+##### 4. Delete Pod
 ```shell
 kubectl delete pod memory-demo --namespace=task4
 ```
