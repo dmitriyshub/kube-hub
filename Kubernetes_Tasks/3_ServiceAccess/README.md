@@ -20,7 +20,9 @@ Check Cluster Information
 ```yaml
 kubectl cluster-info
 ```
-#### NodePort
+*********************************************************************
+#### NodePort Service Type
+*********************************************************************
 ##### 1. Apply hello-app
 ```yaml
 apiVersion: apps/v1
@@ -81,9 +83,8 @@ kubectl describe services hello-world-deployment-service -n task3
 *********************************************************************
 ##### 3. Access App
 ```shell
-curl http://<public-node-ip>:<node-port>
+curl http://<public-node-ip>:<node-port> # or with any Web Browser 
 ```
-or with any web browser 
 *********************************************************************
 ##### 3.Delete All
 ```shell
@@ -95,7 +96,8 @@ kubectl delete services hello-world-deployment-service -n task3
 kubectl delete deployment hello-world -n task3
 ```
 *********************************************************************
-#### Or ClusterIP 
+#### ClusterIP Service Type
+*********************************************************************
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -134,4 +136,6 @@ spec:
 ```shell
 kubectl apply -f hello-app2.yaml -n task3
 kubectl port-forward service/hello-world-service 8080:8080 -n task3
+curl 127.0.0.1:8080 # Or with any Web Browser
 ```
+*********************************************************************
