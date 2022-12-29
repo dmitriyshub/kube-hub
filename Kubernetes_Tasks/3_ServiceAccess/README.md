@@ -20,6 +20,7 @@ Check Cluster Information
 ```yaml
 kubectl cluster-info
 ```
+#### NodePort
 ##### 1. Apply hello-app
 ```yaml
 apiVersion: apps/v1
@@ -94,3 +95,42 @@ kubectl delete services hello-world-deployment-service -n task3
 kubectl delete deployment hello-world -n task3
 ```
 *********************************************************************
+#### Or ClusterIP 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  selector:
+    matchLabels:
+      run: load-balancer-example
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: load-balancer-example
+    spec:
+      containers:
+        - name: hello-world
+          image: gcr.io/google-samples/node-hello:1.0
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-service
+spec:
+  selector:
+    run: load-balancer-example
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+```
+```shell
+kubectl apply -f hello-app2.yaml -n task3
+kubectl port-forward service/hello-world-service 8080:8080 -n task3
+```
