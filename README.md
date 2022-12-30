@@ -35,6 +35,14 @@ Check kubectl state `kubectl cluster-info`
 * [Assign CPU Resources to Containers and Pods](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/5_AssignCpu)
 * [Configure Liveness, Readiness and Startup Probes](https://github.com/dmitriyshub/kube-hub/tree/main/Kubernetes_Tasks/6_LivenessReadiness)
 *********************************************************************
+#### 5. Stop and Delete Minikube
+```shell
+minikube pause
+minikube unpause
+minikube stop
+minikube delete --all
+```
+*********************************************************************
 #### My Other K8s Tasks
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/Other_Tasks/1_SimpleWebserver)
 * [Zero downtime deployment](https://github.com/dmitriyshub/kube-hub/tree/main/Other_Tasks/2_ZeroDowntimeDeployment)
