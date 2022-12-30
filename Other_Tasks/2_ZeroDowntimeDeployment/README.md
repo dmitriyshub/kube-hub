@@ -13,6 +13,7 @@ terraform init
 terraform plan
 terraform apply -auto-approve
 ```
+*********************************************************************
 ##### 3. Build Docker Image and Push it to Public Container Repository
 ##### AWS ECR
 ```shell
