@@ -1,21 +1,33 @@
 *********************************************************************
 #### Zero- downtime-deployment-demo
 *********************************************************************
-##### 1. Configure AWS (Optional)
-edit `~/.aws/*` files or use AWS tool: `aws configure`
+##### 1. Configure Container Registry
+##### AWS ECR
+Create AWS access and secret keys, edit `~/.aws/*` files or use AWS tool: `aws configure`
+##### GitHub Container Registry
+Create GitHub classic token, export to env variable `export CR_PAT=YOUR_TOKEN`
 *********************************************************************
-##### 2. Deploy public ecr (or any another **public** repository)
+##### 2. Deploy public ecr (Only for AWS skip this step if GitHub chosen)
 ```shell
 terraform init
 terraform plan
 terraform apply -auto-approve
 ```
-##### 3. Build Docker Image and Push it to Public Repository
+##### 3. Build Docker Image and Push it to Public Container Repository
+##### AWS ECR
 ```shell
 aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/s2q9x3z0
 docker build -t public.ecr.aws/s2q9x3z0/dmitriyshub-zero-downtime-app:0.0.1 .
 docker push public.ecr.aws/s2q9x3z0/dmitriyshub-zero-downtime-app:0.0.1
 ```
+##### GitHub Container Registry
+```shell
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+docker build -t ghcr.io/dmitriyshub/zero-downtime-app:0.0.1 .
+docker push ghcr.io/OWNER/IMAGE_NAME:0.0.1
+```
+[Change Visibility to Public](https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility)
+
 *********************************************************************
 ##### 4. Change `image:version` in `deployment.yaml` file
 ```yaml
