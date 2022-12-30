@@ -34,7 +34,26 @@ kubectl apply -f deployment.yaml
 kubectl get pods -l app=nginx
 ```
 *********************************************************************
-##### 4. Delete deployment 
+##### 4. Add Service
+```yaml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-deployment-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+```
+```shell
+kubectl apply -f deployment.yaml
+```
+*********************************************************************
+##### 5. Delete deployment 
 ```shell
 kubectl delete deployment nginx-deployment
 ```
