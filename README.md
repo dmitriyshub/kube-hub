@@ -19,6 +19,7 @@ minikube dashboard
 Check all options for [`minikube start [option]`](https://minikube.sigs.k8s.io/docs/commands/start/) \
 Additional minikube addons `minikube addons list` \
 Change Node RAM `minikube config set memory <9001>` \
+Understand [Kubernetes Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) \
 Install [Lens Dashboard IDE](https://docs.k8slens.dev/getting-started/install-lens/) 
 *********************************************************************
 #### 3. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
