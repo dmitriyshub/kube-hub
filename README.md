@@ -22,7 +22,17 @@ Change Node RAM `minikube config set memory <9001>` \
 Understand [Kubernetes Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) \
 Install [Lens Dashboard IDE](https://docs.k8slens.dev/getting-started/install-lens/) 
 *********************************************************************
-#### 3. Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+#### 3. Download and Install [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+```shell
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+curl -LO "https://dl.k8s.io/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+```
+If valid, the output is: `kubectl: OK`
+```shell
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+```
 **or create** `alias kubectl="minikube kubectl --`
 Check kubectl state `kubectl cluster-info`
 *********************************************************************
