@@ -1,3 +1,4 @@
+*********************************************************************
 #### 1. Install [Minikube](https://minikube.sigs.k8s.io/docs/start/)
 ```shell
 #Linux Binary Installation x86-64
@@ -65,4 +66,7 @@ minikube delete --all
 *********************************************************************
 #### Optional Steps
 Install and Use [Lens Dashboard IDE](https://docs.k8slens.dev/getting-started/install-lens/) Instead `minikube dashboard`
+*********************************************************************
+
+[Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
