@@ -36,7 +36,10 @@ If valid, the output is: `kubectl: OK`
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 ```
-##### **Use minikube kubectl and Create** `alias kubectl="minikube kubectl --`
+##### **Use minikube kubectl and Create `alias`** 
+```shell 
+alias kubectl="minikube kubectl --
+```
 Check kubectl state `kubectl cluster-info`
 *********************************************************************
 #### 4. Understand [Kubernetes Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
