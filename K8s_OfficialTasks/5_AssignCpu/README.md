@@ -23,14 +23,14 @@ spec:
   containers:
   - name: cpu-demo-ctr
     image: vish/stress
-    args: # The -cpus "2" argument tells the Container to attempt to use 2 CPUs
-    - -cpus 
-    - "2" 
     resources:
       limits:
         cpu: "1" # container cpu limit
       requests:
         cpu: "0.5" # container cpu minimum
+    args: # The -cpus "2" argument tells the Container to attempt to use 2 CPUs
+    - -cpus 
+    - "2" 
 ```
 *********************************************************************
 ##### 1. Create Pod
