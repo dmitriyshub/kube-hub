@@ -1,8 +1,24 @@
 *********************************************************************
-#### Kube-Hub Repository - Practice and Training with K8s
+#### Kube-Hub Repository - Practice and Training with K8s Repository
 *********************************************************************
 #### Docs
 * [Minikube and Kubectl Installation and Configuration](https://github.com/dmitriyshub/kube-hub/blob/main/docs/minikubeREADME.md)
+*********************************************************************
+
+#### Understand [Kubernetes Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
+* `apiVersion` - Which version of the Kubernetes API you're using to create this object
+* `kind` - What kind of object you want to create
+* `metadata` - Data that helps uniquely identify the object, including a name string, UID, and optional namespace
+* `spec` - What state you desire for the object
+
+Labels are **key/value** pairs that are attached to objects, such as Deployment:
+```yaml
+"release" : "stable"
+"environment" : "dev"
+"tier" : "backend"
+```
+*********************************************************************
+#### Choose [Kubernetes Tasks](https://kubernetes.io/docs/tasks/) 
 *********************************************************************
 #### My Official K8s Tasks
 * [Run a Stateless Application Using a Deployment](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/1_StatelessApp) 

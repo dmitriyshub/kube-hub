@@ -39,24 +39,10 @@ kubectl version --client
 alias kubectl="minikube kubectl --
 ```
 Check kubectl state `kubectl cluster-info`
-*********************************************************************
-#### 4. Understand [Kubernetes Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
-* `apiVersion` - Which version of the Kubernetes API you're using to create this object
-* `kind` - What kind of object you want to create
-* `metadata` - Data that helps uniquely identify the object, including a name string, UID, and optional namespace
-* `spec` - What state you desire for the object
-
-Labels are **key/value** pairs that are attached to objects, such as Deployment:
-```yaml
-"release" : "stable"
-"environment" : "dev"
-"tier" : "backend"
-```
 
 *********************************************************************
-#### 5. Choose [Kubernetes Tasks](https://kubernetes.io/docs/tasks/) 
-*********************************************************************
-#### 6. Pause | Stop | Delete - Minikube
+
+#### 5. Pause | Stop | Delete - Minikube
 ```shell
 minikube pause
 minikube unpause
