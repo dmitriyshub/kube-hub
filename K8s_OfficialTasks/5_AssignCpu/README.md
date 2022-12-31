@@ -68,14 +68,14 @@ spec:
   containers:
   - name: cpu-demo-ctr-2
     image: vish/stress
-    args:
-    - -cpus
-    - "2"
     resources:
       limits:
         cpu: "100"
       requests:
         cpu: "100"
+    args:
+    - -cpus
+    - "2"
 ```
 *********************************************************************
 ##### 1. Create Pod
