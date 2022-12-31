@@ -36,13 +36,18 @@ spec:
 *********************************************************************
 ##### 1. Create Pod
 ```shell
-kubectl apply -f https://k8s.io/examples/pods/probe/exec-liveness.yaml
+kubectl apply -f exec-liveness.yaml
 ```
 *********************************************************************
 ##### 2. View the Pod events
 ```shell
 kubectl describe pod liveness-exec
 kubectl get pod liveness-exec
+```
+*********************************************************************
+##### 3. Delete Pod
+```shell
+kubectl delete -f exec-liveness.yaml
 ```
 *********************************************************************
 #### Define a liveness HTTP request 
@@ -88,13 +93,18 @@ http.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
 *********************************************************************
 ##### 1. Create Pod
 ```shell
-kubectl apply -f https://k8s.io/examples/pods/probe/http-liveness.yaml
+kubectl apply -f http-liveness.yaml
 ```
 *********************************************************************
 ##### 2. Inspect Pod
 * After 10 seconds, view Pod events to verify that liveness probes have failed and the container has been restarted
 ```shell
 kubectl describe pod liveness-http
+```
+*********************************************************************
+##### 3. Delete Pod
+```shell
+kubectl delete -f http-liveness.yaml
 ```
 *********************************************************************
 #### Define a TCP liveness probe 
@@ -134,5 +144,10 @@ kubectl apply -f tcp-liveness-readiness.yaml
 ##### 2. After 15 seconds, view Pod events to verify that liveness probes:
 ```shell
 kubectl describe pod goproxy
+```
+*********************************************************************
+##### 3. Delete Pod
+```shell
+kubectl delete -f tcp-liveness-readiness.yaml
 ```
 *********************************************************************
