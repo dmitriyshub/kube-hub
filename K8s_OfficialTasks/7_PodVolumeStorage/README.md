@@ -59,3 +59,6 @@ kubectl delete pod redis -n task7
 ```
 *********************************************************************
 ##### In addition to the local disk storage provided by emptyDir, Kubernetes supports many different network-attached storage solutions, including PD on GCE and EBS on EC2, which are preferred for critical data and will handle details such as mounting and unmounting the devices on the nodes. [See Volumes for more details](https://kubernetes.io/docs/concepts/storage/volumes/)
+*********************************************************************
+[Return to main README](https://github.com/dmitriyshub/kube-hub)
+*********************************************************************

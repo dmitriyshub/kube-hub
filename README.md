@@ -34,6 +34,3 @@ Labels are **key/value** pairs that are attached to objects, such as Deployment:
 #### My Other K8s Tasks
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/1_SimpleWebserver)
 * [Zero downtime deployment](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OtherTasks/2_ZeroDowntimeDeployment)
-*********************************************************************
-[Return to main README](https://github.com/dmitriyshub/kube-hub)
-*********************************************************************
