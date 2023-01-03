@@ -23,7 +23,7 @@ spec:
 *********************************************************************
 ##### 1. Create Pod
 ```shell
-kubectl apply -f redis.yaml -n task7
+kubectl apply -f redis-storage.yaml -n task7
 kubectl get pod redis --watch # Verify that the Pod's Container is running, and then watch for changes to the Pod
 ```
 *********************************************************************
@@ -59,6 +59,31 @@ kubectl delete pod redis -n task7
 ```
 *********************************************************************
 ##### In addition to the local disk storage provided by emptyDir, Kubernetes supports many different network-attached storage solutions, including PD on GCE and EBS on EC2, which are preferred for critical data and will handle details such as mounting and unmounting the devices on the nodes. [See Volumes for more details](https://kubernetes.io/docs/concepts/storage/volumes/)
+*********************************************************************
+##### Configure initContainers
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+spec:
+  initContainers:
+    - name: git-clone-repo
+      image: alpine/git:latest
+      command: [ 'sh', '-c', "git clone --single-branch --depth 1 --branch {{BRANCH}} {{git-server.host}}/repo.git /app" ]
+      volumeMounts:
+        - mountPath: /app
+          name: repo
+  containers:
+    - name: secured-image
+      image: secured-image:0.0.1
+      volumeMounts:
+        - mountPath: /app
+          name: repo
+  volumes:
+    - name: repo
+      emptyDir: {}
+```
 *********************************************************************
 [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
