@@ -29,8 +29,11 @@ Labels are **key/value** pairs that are attached to objects, such as Deployment:
 * [Assign Memory Resources to Containers and Pods](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/4_AssignMemory)
 * [Assign CPU Resources to Containers and Pods](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/5_AssignCpu)
 * [Configure Liveness, Readiness and Startup Probes](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/6_LivenessReadiness)
+* [Configure a Pod to Use a Volume for Storage](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/7_PodVolumeStorage)
 *********************************************************************
 #### My Other K8s Tasks
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/1_SimpleWebserver)
 * [Zero downtime deployment](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OtherTasks/2_ZeroDowntimeDeployment)
+*********************************************************************
+[Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
