@@ -1,7 +1,6 @@
 *********************************************************************
 #### Kube-Hub Repository - Practice and Training with K8s Repository
 *********************************************************************
-
 #### [Understand Kubernetes Object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/)
 *********************************************************************
 * `apiVersion` - Which version of the Kubernetes API you're using to create this object
@@ -16,9 +15,15 @@ Labels are **key/value** pairs that are attached to objects, such as Deployment:
 "tier" : "backend"
 ```
 *********************************************************************
+#### Switch between clusters
+```shell
+kubectl config get-clusters
+kubectl config use-context minikube # minikube
+kubectl config use-context arn:aws:eks:region:accountId:cluster/name # EKS
+```
+*********************************************************************
 #### My Docs
 * [Minikube and Kubectl Installation and Configuration](https://github.com/dmitriyshub/kube-hub/blob/main/docs/minikubeREADME.md)
-
 *********************************************************************
 #### [Official Kubernetes Tasks](https://kubernetes.io/docs/tasks/) 
 *********************************************************************
