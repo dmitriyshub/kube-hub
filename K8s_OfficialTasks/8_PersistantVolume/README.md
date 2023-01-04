@@ -123,7 +123,7 @@ kubectl delete pvc task-pv-claim -n task8
 kubectl delete pv task-pv-volume -n task8
 ```
 *********************************************************************
-##### [See Volumes for more details](https://kubernetes.io/docs/concepts/storage/volumes/)
+##### [See Persistent Volumes for more details](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 *********************************************************************
 [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
