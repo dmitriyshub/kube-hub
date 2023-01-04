@@ -124,6 +124,34 @@ kubectl delete pvc task-pv-claim -n task8
 kubectl delete pv task-pv-volume -n task8
 ```
 *********************************************************************
+##### Mounting the same persistentVolume in two places
+*********************************************************************
+* You can perform 2 volume mounts on your nginx container
+* /usr/share/nginx/html for the static website 
+* /etc/nginx/nginx.conf for the default config
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+spec:
+  containers:
+    - name: test
+      image: nginx
+      volumeMounts:
+        # a mount for site-data
+        - name: config
+          mountPath: /usr/share/nginx/html
+          subPath: html
+        # another mount for nginx config
+        - name: config
+          mountPath: /etc/nginx/nginx.conf
+          subPath: nginx.conf
+  volumes:
+    - name: config
+      persistentVolumeClaim:
+        claimName: test-nfs-claim
+```
 ##### [See Persistent Volumes for more details](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 *********************************************************************
 [Return to main README](https://github.com/dmitriyshub/kube-hub)
