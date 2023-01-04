@@ -4,7 +4,8 @@
 ##### Create an index.html file on your Node
 *********************************************************************
 ```shell
-minikube ssh # connect to cluster
+minikube node list
+minikube ssh -n node # connect to cluster
 sudo mkdir /mnt/data # In your shell on that Node, create a /mnt/data directory
 sudo sh -c "echo 'Hello from Kubernetes storage' > /mnt/data/index.html" # In the /mnt/data directory, create an index.html file
 cat /mnt/data/index.html # Test that the index.html file exists

@@ -15,4 +15,4 @@ spec:
           name: "http-server"
       volumeMounts:
         - mountPath: "/usr/share/nginx/html"
-          name: task -pv-storage
+          name: task-pv-storage
