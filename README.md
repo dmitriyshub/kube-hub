@@ -41,3 +41,4 @@ kubectl config use-context arn:aws:eks:region:accountId:cluster/name # EKS
 #### My Other K8s Tasks
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/1_SimpleWebserver)
 * [Zero downtime deployment](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OtherTasks/2_ZeroDowntimeDeployment)
+*********************************************************************
