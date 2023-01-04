@@ -18,6 +18,7 @@ Labels are **key/value** pairs that are attached to objects, such as Deployment:
 #### Switch between clusters
 ```shell
 kubectl config get-clusters
+kubectl config get-contexts
 kubectl config use-context minikube # minikube
 kubectl config use-context arn:aws:eks:region:accountId:cluster/name # EKS
 ```
