@@ -20,7 +20,7 @@ Labels are **key/value** pairs that are attached to objects, such as Deployment:
 kubectl config get-clusters
 kubectl config get-contexts
 kubectl config use-context minikube # minikube
-kubectl config use-context arn:aws:eks:region:accountId:cluster/name # EKS
+kubectl config use-context arn:aws:eks:<region>:<accountId>:cluster/<name> # EKS
 ```
 *********************************************************************
 #### My Docs
