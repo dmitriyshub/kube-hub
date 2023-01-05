@@ -36,17 +36,17 @@ resource "aws_ecrpublic_repository" "public-ecr" {
 resource "aws_ecrpublic_repository" "public-ecr2" {
   provider = aws.us_east_1
 
-  repository_name = "dmitriyshub-zero-downtime-app-2"
+  repository_name = "dmitriyshub-zero-downtime-app-new"
 
   catalog_data {
-    about_text        = "simple flask webserver 2"
-    description       = "docker image for k8s 2"
+    about_text        = "simple flask webserver new version"
+    description       = "docker image for k8s new version"
   }
 
   tags = {
     owner = "terraform"
     env = "test"
-    name = "dmitriyshub-zero-downtime-app-2"
+    name = "dmitriyshub-zero-downtime-app-new-version"
   }
 }
 
