@@ -18,7 +18,7 @@ terraform apply -auto-approve
 ##### AWS ECR
 ```shell
 aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/s2q9x3z0
-docker build -t public.ecr.aws/s2q9x3z0/dmitriyshub-zero-downtime-app:0.0.1 .
+docker build -t public.ecr.aws/r7m7o9d4/dmitriyshub-zero-downtime-app:0.0.1 .
 docker push public.ecr.aws/s2q9x3z0/dmitriyshub-zero-downtime-app:0.0.1
 ```
 ##### GitHub Container Registry
