@@ -47,6 +47,7 @@ kubectl apply -f deployment.yaml -n zero-downtime
 ```shell
 kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never --namespace zero-downtime -- /bin/sh -c "while sleep 0.2; do (wget -q -O- http://simple-webserver-service:8080 &); done"
 ```
+* 5 request per second to service
 *********************************************************************
 ##### 7. During the load test, perform a rolling update to a new version of the app (new built Docker image)
 * Change the Python code so it can be seen clearly when you are responded from the new app version. e.g. return Hello world 2 instead of Hello world
