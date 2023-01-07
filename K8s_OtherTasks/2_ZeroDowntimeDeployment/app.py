@@ -11,7 +11,7 @@ terminated = False
 @app.route('/', methods=['GET'])
 def index():
     time.sleep(0.1)
-    return f'Hello world 2\n {platform.node()}'
+    return f'Hello world 2 from {platform.node()} \n'
 
 
 @app.route('/ready')
