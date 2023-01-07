@@ -79,5 +79,5 @@ readinessProbe:
 ##### Dashboard Screenshot
 ![Dashboard Screenshot](img/zero_downtime_dashboard.jpg)
 *********************************************************************
-[Return to main README](https://github.com/dmitriyshub/kube-hub)
+##### [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************

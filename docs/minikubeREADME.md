@@ -53,6 +53,5 @@ minikube delete --all
 #### Optional Steps
 Install and Use [Lens Dashboard IDE](https://docs.k8slens.dev/getting-started/install-lens/) Instead `minikube dashboard`
 *********************************************************************
-
-[Return to main README](https://github.com/dmitriyshub/kube-hub)
+##### [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************

@@ -32,5 +32,5 @@ Inside the db ping request `db.runCommand( { ping: 1 } )`
 kubectl delete -f mongo-deployment.yaml
 ```
 *********************************************************************
-[Return to main README](https://github.com/dmitriyshub/kube-hub)
+##### [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
