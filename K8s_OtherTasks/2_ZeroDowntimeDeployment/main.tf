@@ -32,23 +32,23 @@ resource "aws_ecrpublic_repository" "public-ecr" {
   }
 }
 
-# public ecr
-resource "aws_ecrpublic_repository" "public-ecr2" {
-  provider = aws.us_east_1
-
-  repository_name = "dmitriyshub-zero-downtime-app-new"
-
-  catalog_data {
-    about_text        = "simple flask webserver new version"
-    description       = "docker image for k8s new version"
-  }
-
-  tags = {
-    owner = "terraform"
-    env = "test"
-    name = "dmitriyshub-zero-downtime-app-new-version"
-  }
-}
+## public ecr
+#resource "aws_ecrpublic_repository" "public-ecr2" {
+#  provider = aws.us_east_1
+#
+#  repository_name = "dmitriyshub-zero-downtime-app-new"
+#
+#  catalog_data {
+#    about_text        = "simple flask webserver new version"
+#    description       = "docker image for k8s new version"
+#  }
+#
+#  tags = {
+#    owner = "terraform"
+#    env = "test"
+#    name = "dmitriyshub-zero-downtime-app-new-version"
+#  }
+#}
 
 # ecr 1 resource metadata output
 output "public-ecr-arn" {
@@ -63,13 +63,13 @@ output "public-ecr-uri" {
 
 
 
-# ecr 2 resource metadata output
-output "public-ecr-arn-2" {
-  value = aws_ecrpublic_repository.public-ecr2.arn
-}
-output "public-ecr-id-2" {
-  value = aws_ecrpublic_repository.public-ecr2.id
-}
-output "public-ecr-uri-2" {
-  value = aws_ecrpublic_repository.public-ecr2.repository_uri
-}
+## ecr 2 resource metadata output
+#output "public-ecr-arn-2" {
+#  value = aws_ecrpublic_repository.public-ecr2.arn
+#}
+#output "public-ecr-id-2" {
+#  value = aws_ecrpublic_repository.public-ecr2.id
+#}
+#output "public-ecr-uri-2" {
+#  value = aws_ecrpublic_repository.public-ecr2.repository_uri
+#}
