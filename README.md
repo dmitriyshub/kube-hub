@@ -37,7 +37,7 @@ kubectl config use-context arn:aws:eks:<region>:<accountId>:cluster/<name> # EKS
 * [Configure Liveness, Readiness and Startup Probes](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/6_LivenessReadiness)
 * [Configure a Pod to Use a Volume for Storage](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/7_PodVolumeStorage)
 * [Configure a Pod to Use a PersistentVolume for Storage](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/8_PersistantVolume)
-
+* [Distribute Credentials Securely Using Secrets](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/9_CredentialsSecrets)
 *********************************************************************
 #### My Other K8s Tasks
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/1_SimpleWebserver)
