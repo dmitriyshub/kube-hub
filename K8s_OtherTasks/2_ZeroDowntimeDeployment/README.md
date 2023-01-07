@@ -57,6 +57,7 @@ containers:
 ```
 *********************************************************************
 ##### 8. Observe how during rolling update, some requests are failing
+![error image](img/zero_downtime_err.jpg)
 *********************************************************************
 ##### 9. Use the /ready endpoint and add a readinessProbe to gain zero-downtime rolling update, which means, all user requests are being served, even during the update
 ```yaml
@@ -67,6 +68,12 @@ readinessProbe:
  initialDelaySeconds: 5
  periodSeconds: 3
 ```
+*********************************************************************
+##### Rolling update Start
+![start image](img/zero_downtime_start.jpg)
+*********************************************************************
+##### Rolling update End
+![error image](img/zero_downtime_end.jpg)
 *********************************************************************
 [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
