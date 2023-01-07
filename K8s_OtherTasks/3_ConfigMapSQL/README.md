@@ -18,5 +18,7 @@ any file ends with .cnf under that directory, will be applied as an additional c
 *********************************************************************
 ##### Make sure the new configurations applied
 *********************************************************************
-[Return to main README](https://github.com/dmitriyshub/kube-hub)
+##### [Further reading and doing](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap)
+*********************************************************************
+##### [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
