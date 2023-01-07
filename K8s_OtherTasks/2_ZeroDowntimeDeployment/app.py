@@ -2,7 +2,7 @@ import signal
 import time
 from flask import Flask
 from loguru import logger
-
+import platform
 app = Flask(__name__)
 
 terminated = False
@@ -11,7 +11,7 @@ terminated = False
 @app.route('/', methods=['GET'])
 def index():
     time.sleep(0.1)
-    return 'Hello world 2\n'
+    return f'Hello world 2\n {platform.node()}'
 
 
 @app.route('/ready')
