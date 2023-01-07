@@ -50,10 +50,23 @@ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never --
 *********************************************************************
 ##### 7. During the load test, perform a rolling update to a new version of the app (new built Docker image)
 * Change the Python code so it can be seen clearly when you are responded from the new app version. e.g. return Hello world 2 instead of Hello world
+```yaml
+containers:
+  - name: simple-webserver
+    image: public.ecr.aws/r7m7o9d4/dmitriyshub-zero-downtime-app:0.0.2
+```
 *********************************************************************
 ##### 8. Observe how during rolling update, some requests are failing
 *********************************************************************
 ##### 9. Use the /ready endpoint and add a readinessProbe to gain zero-downtime rolling update, which means, all user requests are being served, even during the update
+```yaml
+readinessProbe:
+ httpGet:
+  path: /ready
+  port: 8080
+ initialDelaySeconds: 5
+ periodSeconds: 3
+```
 *********************************************************************
 [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
