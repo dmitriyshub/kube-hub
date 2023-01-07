@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: simple-webserver
-          image: public.ecr.aws/r7m7o9d4/dmitriyshub-zero-downtime-app:0.0.1
+          image: public.ecr.aws/r7m7o9d4/dmitriyshub-zero-downtime-app:0.0.2
           readinessProbe:
             httpGet:
               path: /ready
