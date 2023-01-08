@@ -5,7 +5,9 @@
 *********************************************************************
 [Fluentd](https://www.fluentd.org/) is an open source data collector for unified logging layer.
 Fluent allows you to unify data collection and consumption for a better use and understanding of data.
+
 ---
+
 Here is an illustration of how Fluent works in the k8s cluster:
 
 ![FluentD with elasticSearch Architecture](img/fluent.png)
