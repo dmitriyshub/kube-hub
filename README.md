@@ -44,6 +44,7 @@ kubectl config use-context arn:aws:eks:<region>:<accountId>:cluster/<name> # EKS
 - [Distribute Credentials Securely Using Secrets](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/9_CredentialsSecrets)
 - [Run a Single-Instance Stateful Application](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/10_SingleStatefulApp)
 - [HorizontalPodAutoscaler Walkthrough](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/11_HorizontalPodAutoscaler)
+- [Running Automated Tasks with a CronJob](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OfficialTasks/12_AutomatedCronJobs)
 *********************************************************************
 #### My Other K8s Tasks
 *********************************************************************
