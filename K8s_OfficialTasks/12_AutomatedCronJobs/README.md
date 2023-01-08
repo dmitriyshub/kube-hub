@@ -37,5 +37,7 @@ kubectl logs $pods
 kubectl delete cronjob hello
 ```
 *********************************************************************
+##### [Further reading and doing](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+*********************************************************************
 ##### [Return to main README](https://github.com/dmitriyshub/kube-hub)
 *********************************************************************
