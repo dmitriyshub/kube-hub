@@ -43,4 +43,5 @@ kubectl config use-context arn:aws:eks:<region>:<accountId>:cluster/<name> # EKS
 * [Simple Flask Webserver](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/1_SimpleWebserver)
 * [Zero downtime deployment](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OtherTasks/2_ZeroDowntimeDeployment)
 * [MySQL server Deployment with ConfigMap](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OtherTasks/3_ConfigMapSQL)
+* [Multi AZ MySql Cluster With helm](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/4_MultiAzSQLCluster)
 *********************************************************************
