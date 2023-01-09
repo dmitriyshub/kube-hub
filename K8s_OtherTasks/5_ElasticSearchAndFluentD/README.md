@@ -58,6 +58,13 @@ While replacing `<elasticsearch-host>` and `<elasticsearch-port>` with the hostn
 1. Review the objects in `grafana.yaml` and apply.
 2. Visit grafana service (default username and password is `admin`) and configure the Elasticsearch database to view all cluster logs.
 
+![Grafana with ElasticSearch](img/Screenshot_grafana.jpg)
+
+---
+
+##### Final K8s Dashboard
+![K8s Dashboard](img/Screenshot_dashboard-els-fluent.jpg)
+
 ---
 
 ### Fluentd permissions in the cluster
