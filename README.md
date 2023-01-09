@@ -53,4 +53,5 @@ kubectl config use-context arn:aws:eks:<region>:<accountId>:cluster/<name> # EKS
 - [MySQL server Deployment with ConfigMap](https://github.com/dmitriyshub/kube-hub/tree/main/K8s_OtherTasks/3_ConfigMapSQL)
 - [Multi AZ MySql Cluster With helm](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/4_MultiAzSQLCluster)
 - [Stream Pod logs to Elasticsearch databases using FluentD](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/5_ElasticSearchAndFluentD)
+- [EKS cluster tutorial](https://github.com/dmitriyshub/kube-hub/blob/main/K8s_OtherTasks/6_EksCluster)
 *********************************************************************
