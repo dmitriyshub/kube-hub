@@ -1,3 +1,6 @@
+podSecurityPolicy:
+  enabled: false
+
 fileConfigs:
   04_outputs.conf: |-
     <label @OUTPUT>
