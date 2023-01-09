@@ -15,9 +15,9 @@ spec:
         app: grafana
     spec:
       securityContext:
-        runAsUser: 472
-        runAsGroup: 8020
-        fsGroup: 8020
+        runAsUser: 0
+        runAsGroup: 0
+        fsGroup: 0
       containers:
       - name: grafana
         image: grafana/grafana-oss:9.1.8
