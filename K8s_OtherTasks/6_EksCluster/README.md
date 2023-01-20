@@ -22,8 +22,9 @@ kubectl get nodes
 *********************************************************************
 ##### 1. Create EKS cluster Role
 *********************************************************************
+##### Role template
 ```shell
-cat >eks-cluster-role-trust-policy.json <<EOF
+cat >EksClusterRoleTrustPolicy.json <<EOF
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -38,10 +39,11 @@ cat >eks-cluster-role-trust-policy.json <<EOF
 }
 EOF
 ```
-
+##### Create role
 ```shell
 aws iam create-role --role-name myAmazonEKSClusterRole --assume-role-policy-document file://"eks-cluster-role-trust-policy.json"
 ```
+##### Attach policy to role
 
 ```shell
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy --role-name myAmazonEKSClusterRole
@@ -50,7 +52,7 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonEKSCluster
 ##### 2. Create EKS cluster 
 *********************************************************************
 - ##### [AWS EKS Creating Guide](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html)
-- ##### with AWS cli 
+- ##### with AWS cli
 ```shell
 aws eks create-cluster --profile cli-profile --region region-code --name my-cluster --kubernetes-version 1.24 \
    --role-arn arn:aws:iam::111122223333:role/myAmazonEKSClusterRole \
